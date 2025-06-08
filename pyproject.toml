@@ -1,0 +1,6 @@
+[project]
+name = "arbitrary-capacitance-matrix"
+version = "0.1.0"
+dependencies = [
+    "numpy==2.3.0",
+]
