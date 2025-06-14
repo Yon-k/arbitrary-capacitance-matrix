@@ -1,6 +1,52 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "arbitrary-capacitance-matrix"
 version = "0.1.0"
-dependencies = [
-    "numpy==2.3.0",
+description = "Compute the capacitance matrix of N conducting spheres using the method of mirror images"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Carlos Pérez Espinar"},
+    {name = "Moisés Pérez Espinosa"},
 ]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+keywords = ["electrostatics", "capacitance", "physics", "mirror-images", "spheres"]
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=1.20.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov",
+    "black",
+    "isort",
+]
+examples = [
+    "matplotlib",
+    "jupyter",
+]
+
+[project.urls]
+Homepage = "https://github.com/carlosperezespinar/arbitrary-capacitance-matrix"
+Documentation = "https://github.com/carlosperezespinar/arbitrary-capacitance-matrix"
+Repository = "https://github.com/carlosperezespinar/arbitrary-capacitance-matrix"
+Issues = "https://github.com/carlosperezespinar/arbitrary-capacitance-matrix/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/capmatrix"]
