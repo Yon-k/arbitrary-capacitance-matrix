@@ -31,10 +31,10 @@ def main():
 
     # Compute capacitance matrix
     print("Computing capacitance matrix...")
-    C = compute_capacitance_matrix(spheres, tolerance=1e-10, max_iterations=100)
+    C = compute_capacitance_matrix(spheres, tolerance=1e-20, max_iterations=100)
 
     print("\nCapacitance matrix (F):")
-    print(f"C11 = {C[0,0]:.6e}")  
+    print(f"C11 = {C[0,0]:.6e}")
     print(f"C12 = {C[0,1]:.6e}")
     print(f"C21 = {C[1,0]:.6e}")
     print(f"C22 = {C[1,1]:.6e}")
